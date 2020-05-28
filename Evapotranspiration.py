@@ -66,7 +66,7 @@ class EvapoTranspiration( SoilHeatFlux, NetRadiation, PsychometricConstant, Slop
         return((self._priestley_taylor_coefficient*(net_radiation_value - soil_heat_flux_value) * delta_value) / (delta_value+gamma_value))
 
 def main():     
-    net_radiation_components = EvapoTranspiration(albedo = 10, elevation = 10,air_temperature_data = 27, out_going_long_wave_radiation = 100, insolation = 600, NDVI = 0.7, land_surface_temperature = 45, Priestley_Taylor_Coefficient = 1.26)
+    net_radiation_components = EvapoTranspiration(albedo = 1, elevation = 100,air_temperature_data = 27, out_going_long_wave_radiation = 100, insolation = 600, NDVI = 0.7, land_surface_temperature = 45, Priestley_Taylor_Coefficient = 1.26)
     print(net_radiation_components.EvapoTranspirationValue())
 
 if __name__ == '__main__': main()
